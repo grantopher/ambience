@@ -1,0 +1,8 @@
+.blocky {
+    display: inline-block;
+    width: 12vw;
+    margin: 10px 2px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
