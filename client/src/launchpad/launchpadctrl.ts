@@ -72,13 +72,15 @@ export class LaunchPadCtrl {
 	blink(coord: number) {
 		let pad = this._mapped_pads[coord];
 		if (pad.blinking) {
-			if (pad.color === COLORS.AGREEN) {
+			if (pad.color === COLORS.DGREEN) {
 				pad.color = COLORS.YGREEN;
 			} else {
-				pad.color = COLORS.AGREEN;
+				pad.color = COLORS.DGREEN;
 			}
 			this._out.send([PAD, coord, pad.color]);
 			setTimeout(this.blink.bind(this, coord), 500);
+		} else {
+			this._out.send([PAD, coord, COLORS.DGREEN]);
 		}
 	}
 }

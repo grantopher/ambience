@@ -19,7 +19,7 @@ const serverConfig = {
   },
   output: {
     path: path.resolve(__dirname, 'server/dist'),
-    filename: 'node.js'
+    filename: 'app-bundle.js'
   }
 };
 

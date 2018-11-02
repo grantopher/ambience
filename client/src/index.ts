@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import * as jsmediatags from '../../node_modules/jsmediatags/dist/jsmediatags.min.js';
+import * as jsmediatags from '../../node_modules/jsmediatags/dist/jsmediatags.js';
 import { mediaResult } from './launchpad/interfaces';
 import { LaunchPadCtrl } from './launchpad/launchpadctrl';
 import { Pad } from './launchpad/padMap';
@@ -57,7 +57,7 @@ fileIn.onchange = function (event) {
 		if (file.type.match('audio')) {
 			var filemeta: filemeta = {
 				filename: file.name,
-				type: file.type
+				type:file.type
 			}
 			jsmediatags.read(file, {
 				onSuccess: function (result: mediaResult) {
